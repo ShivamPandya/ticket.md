@@ -1,4 +1,4 @@
-# 🎫 TICKET.MD
+# 🎫 INTERN.MD
 
 A Claude skill that fetches JIRA ticket details and drives end-to-end development — from branch creation through implementation to PR preparation.
 
