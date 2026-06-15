@@ -1,6 +1,6 @@
-# 🎫 JIRA Ticket Worker
+# 🎫 TICKET.MD
 
-A Copilot skill that fetches JIRA ticket details and drives end-to-end development — from branch creation through implementation to PR preparation.
+A Claude skill that fetches JIRA ticket details and drives end-to-end development — from branch creation through implementation to PR preparation.
 
 Works with both **JIRA Server / Data Center** and **Atlassian Cloud**.
 
@@ -10,7 +10,7 @@ Works with both **JIRA Server / Data Center** and **Atlassian Cloud**.
 
 | File | Purpose |
 |---|---|
-| `ticket.md` | Copilot skill definition (agent instructions) |
+| `ticket.md` | Claude skill definition (agent instructions) |
 | `fetch_jira_ticket.py` | Python script to fetch ticket details via JIRA REST API |
 | `config.json` | Configuration — JIRA URL, auth, branch naming, etc. |
 
