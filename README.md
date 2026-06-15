@@ -1,5 +1,3 @@
-# ticket.md
-
 # 🎫 JIRA Ticket Worker
 
 A Copilot skill that fetches JIRA ticket details and drives end-to-end development — from branch creation through implementation to PR preparation.
@@ -14,7 +12,7 @@ Works with both **JIRA Server / Data Center** and **Atlassian Cloud**.
 |---|---|
 | `ticket.md` | Copilot skill definition (agent instructions) |
 | `fetch_jira_ticket.py` | Python script to fetch ticket details via JIRA REST API |
-| `jira_config.json` | Configuration — JIRA URL, auth, branch naming, etc. |
+| `config.json` | Configuration — JIRA URL, auth, branch naming, etc. |
 
 ---
 
@@ -26,7 +24,7 @@ Works with both **JIRA Server / Data Center** and **Atlassian Cloud**.
 pip install requests
 ```
 
-### 2. Configure `jira_config.json`
+### 2. Configure `config.json`
 
 Open the file and replace the placeholders:
 
@@ -112,14 +110,14 @@ python fetch_jira_ticket.py PROJ-456
 python fetch_jira_ticket.py PROJ-456 --raw
 
 # Custom config path
-python fetch_jira_ticket.py PROJ-456 --config /path/to/jira_config.json
+python fetch_jira_ticket.py PROJ-456 --config /path/to/config.json
 ```
 
 ---
 
 ## ⚙️ Configuration Reference
 
-All settings live in `jira_config.json`:
+All settings live in `config.json`:
 
 | Field | Description | Example |
 |---|---|---|
@@ -158,4 +156,4 @@ Branches are auto-created based on the issue type:
 | `Ticket not found` | Check the ticket key and make sure `jira_base_url` is correct. |
 | `SSL certificate error` | Set `"verify_ssl": false` in config (common for corporate instances with internal CAs). |
 | `requests not found` | Run `pip install requests`. |
-| `Config file not found` | Ensure `jira_config.json` is in the same directory as the script, or use `--config`. |
+| `Config file not found` | Ensure `config.json` is in the same directory as the script, or use `--config`. |
